@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "id": "<mod_id>",
+  "id": "kianalibfabric",
   "version": "${version}",
-  "name": "<mod_name>",
-  "description": "<mod_description>",
+  "name": "KianaLib",
+  "description": "Library for my mods.",
   "authors": [
-    "<author>"
+    "Kiana"
   ],
   "license": "MIT",
-  "icon": "assets/<mod_id>/icon.png",
+  "icon": "assets/kianalibfabric/icon.png",
   "environment": "*",
   "mixins": [
-    "<mod_id>.mixins.json"
+    "kianalibfabric.mixins.json"
   ],
   "depends": {
     "fabric-api": "*"
   },
-  "accessWidener": "<mod_id>.accesswidener"
+  "accessWidener": "kianalibfabric.accesswidener"
 }

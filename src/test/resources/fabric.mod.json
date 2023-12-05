@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "testmod",
+  "version": "${version}",
+  "name": "Test Mod",
+  "description": "",
+  "authors": [
+    "Kiana"
+  ],
+  "license": "MIT",
+  "icon": "assets/testmod/icon.png",
+  "environment": "*",
+  "mixins": [
+    "testmod.mixins.json"
+  ],
+  "depends": {
+    "fabric-api": "*"
+  },
+  "accessWidener": "testmod.accesswidener"
+}
