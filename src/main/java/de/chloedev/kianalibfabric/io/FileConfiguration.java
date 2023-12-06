@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import org.simpleyaml.configuration.file.YamlFile;
 
-
 public class FileConfiguration {
 
     private YamlFile file;

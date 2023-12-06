@@ -1,9 +1,11 @@
 package de.chloedev.kianalibfabric.render;
 
+import de.chloedev.kianalibfabric.annotations.Environment;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.text.Text;
 
+@Environment(Environment.Side.CLIENT)
 public class RenderUtil {
 
     public static RenderUtil INSTANCE = new RenderUtil();
@@ -13,13 +15,9 @@ public class RenderUtil {
         this.context = new DrawContext(MinecraftClient.getInstance(), MinecraftClient.getInstance().getBufferBuilders().getEntityVertexConsumers());
     }
 
-    public void drawText(int x, int y, Text text, int color, float scale) {
+    public void drawText(ScreenPos pos, Text text) {
         this.context.getMatrices().push();
-        this.context.getMatrices().scale(scale, scale, scale);
-        this.context.getMatrices().translate(-(x / scale), -(y / scale), -1.0f);
-        this.context.drawTextWithShadow(MinecraftClient.getInstance().textRenderer, text, x, y, color);
-        this.context.getMatrices().scale(-scale, -scale, -scale);
-        this.context.getMatrices().translate(1.0f, 1.0f, 1.0f);
+        this.context.drawTextWithShadow(MinecraftClient.getInstance().textRenderer, text, pos.getX(), pos.getY(), text.getStyle().getColor() != null ? text.getStyle().getColor().getRgb() : 0xFFFFFF);
         this.context.getMatrices().pop();
     }
 }

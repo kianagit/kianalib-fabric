@@ -1,5 +1,6 @@
 package de.chloedev.kianalibfabric.util;
 
+import de.chloedev.kianalibfabric.annotations.Environment;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.resource.Resource;
 import net.minecraft.util.Identifier;
@@ -11,8 +12,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Optional;
 
+@Environment(Environment.Side.CLIENT)
 public class ResourceUtil {
-
 
     public static Identifier getVanillaIdentifier(String path) {
         return new Identifier("minecraft", path);
