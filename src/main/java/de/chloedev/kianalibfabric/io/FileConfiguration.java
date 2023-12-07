@@ -1,8 +1,9 @@
 package de.chloedev.kianalibfabric.io;
 
+import org.simpleyaml.configuration.file.YamlFile;
+
 import java.io.File;
 import java.io.IOException;
-import org.simpleyaml.configuration.file.YamlFile;
 
 public class FileConfiguration {
 
@@ -32,5 +33,9 @@ public class FileConfiguration {
             }
         }
         return this;
+    }
+    
+    public YamlFile getFile() {
+        return file;
     }
 }
