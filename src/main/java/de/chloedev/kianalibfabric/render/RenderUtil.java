@@ -1,11 +1,9 @@
 package de.chloedev.kianalibfabric.render;
 
-import de.chloedev.kianalibfabric.annotations.Environment;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.text.Text;
 
-@Environment(Environment.Side.CLIENT)
 public class RenderUtil {
 
     public static RenderUtil INSTANCE = new RenderUtil();
