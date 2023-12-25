@@ -5,8 +5,8 @@ import de.chloedev.kianalibfabric.event.impl.client.ClientHudRenderEvent;
 import de.chloedev.kianalibfabric.event.impl.client.ClientHudRenderEvent.TextElement;
 import de.chloedev.kianalibfabric.event.impl.client.ClientScreenChangeEvent;
 import de.chloedev.kianalibfabric.render.ScreenPos;
-import net.minecraft.client.gui.screen.option.VideoOptionsScreen;
-import net.minecraft.client.gui.widget.ButtonWidget;
+import de.chloedev.testmod.TestScreen;
+import net.minecraft.client.gui.screen.option.LanguageOptionsScreen;
 import net.minecraft.text.Text;
 
 public class EventListener {
@@ -18,11 +18,9 @@ public class EventListener {
 
     @EventHandler
     public void onScreenChange(ClientScreenChangeEvent e) {
-        System.out.println(e.getOldScreen() + " -> " + e.getNewScreen());
-        if (e.getNewScreen() instanceof VideoOptionsScreen) {
-            e.addChild(ButtonWidget.builder(Text.literal("Test"), button -> {
-                System.out.println("CLICKED");
-            }).dimensions(4, 4, 75, 20).build());
+        System.out.println("Changing Screen: '" + e.getOldScreen() + "' -> '" + e.getNewScreen() + "'");
+        if(e.getNewScreen() instanceof LanguageOptionsScreen s){
+            e.setNewScreen(new TestScreen());
         }
     }
 }
