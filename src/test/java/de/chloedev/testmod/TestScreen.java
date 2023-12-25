@@ -1,6 +1,6 @@
 package de.chloedev.testmod;
 
-import de.chloedev.kianalibfabric.ui.widget.OptionListWidget;
+import de.chloedev.kianalibfabric.ui.widget.option.OptionListWidget;
 import de.chloedev.kianalibfabric.ui.widget.option.ValueHolder;
 import de.chloedev.kianalibfabric.ui.widget.option.type.*;
 import net.minecraft.client.gui.DrawContext;

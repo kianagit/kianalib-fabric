@@ -1,4 +1,4 @@
-package de.chloedev.kianalibfabric.ui.widget;
+package de.chloedev.kianalibfabric.ui.widget.option;
 
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.client.MinecraftClient;

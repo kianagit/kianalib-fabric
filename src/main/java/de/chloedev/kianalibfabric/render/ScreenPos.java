@@ -5,8 +5,8 @@ import net.minecraft.client.util.Window;
 
 public class ScreenPos {
 
-    private float x;
-    private float y;
+    private final float x;
+    private final float y;
 
     ScreenPos(float x, float y) {
         this.x = x;
