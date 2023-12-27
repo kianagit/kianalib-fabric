@@ -19,7 +19,7 @@ public class ValueHolder<T> {
 
     public ValueHolder(T[] values, int defIndex) {
         this.valuesOrdered = List.of(values);
-        this.currentValueIndex = 0;
+        this.currentValueIndex = defIndex;
     }
 
     public List<T> getValuesOrdered() {
