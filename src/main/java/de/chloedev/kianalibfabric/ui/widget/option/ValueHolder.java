@@ -14,6 +14,10 @@ public class ValueHolder<T> {
 
     @SafeVarargs
     public ValueHolder(T... values) {
+        this(values, 0);
+    }
+
+    public ValueHolder(T[] values, int defIndex) {
         this.valuesOrdered = List.of(values);
         this.currentValueIndex = 0;
     }
