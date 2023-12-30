@@ -35,7 +35,6 @@ public class OptionListWidget extends net.minecraft.client.gui.widget.OptionList
         return this;
     }
 
-
     @Override
     public int addSingleOptionEntry(SimpleOption<?> option) {
         return this.addEntry(new WidgetEntry(ImmutableMap.of(option, option.createWidget(this.client.options, OptionListWidget.this.getX() + 4, 0, OptionListWidget.this.width - 14))));
@@ -49,5 +48,10 @@ public class OptionListWidget extends net.minecraft.client.gui.widget.OptionList
     @Override
     protected int getScrollbarPositionX() {
         return (this.getX() + this.width) - 6;
+    }
+
+    @Override
+    public int getRowWidth() {
+        return this.width;
     }
 }
