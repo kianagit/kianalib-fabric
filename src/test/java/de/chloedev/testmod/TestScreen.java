@@ -20,9 +20,13 @@ public class TestScreen extends Screen {
         list.addSingleOptionEntry(new InfoTextOption(Text.literal("--- Custom Options ---")));
         list.addSingleOptionEntry(new StringCycleOption(Text.literal("String-Cycle-Option"), new ValueHolder<>("val0", "val1", "val2", "val3", "val4", "val5"), ActionUtil::doNothing));
         list.addSingleOptionEntry(new IntegerCycleOption(Text.literal("Int-Cycle-Option"), new ValueHolder<>(0, 1, 2), ActionUtil::doNothing));
-        //list.addSingleOptionEntry(new PlaceholderOption());
+        list.addSingleOptionEntry(new PlaceholderOption());
         list.addSingleOptionEntry(new ClickableOption(Text.literal("Clickable-Option"), ActionUtil::doNothing));
         list.addSingleOptionEntry(new BooleanCycleOption(Text.literal("Boolean-Option"), ActionUtil::doNothing));
+        list.addOptionEntry(
+                new BooleanCycleOption(Text.literal("Boolean-Option 1"), ActionUtil::doNothing),
+                new BooleanCycleOption(Text.literal("Boolean-Option 2"), ActionUtil::doNothing)
+        );
         this.addDrawableChild(list);
     }
 
