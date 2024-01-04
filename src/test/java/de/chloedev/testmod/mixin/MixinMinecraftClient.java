@@ -2,6 +2,7 @@ package de.chloedev.testmod.mixin;
 
 import de.chloedev.kianalibfabric.event.EventManager;
 import de.chloedev.kianalibfabric.event.impl.client.ClientTickEvent;
+import de.chloedev.kianalibfabric.util.ActionUtil;
 import de.chloedev.testmod.event.EventListener;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.RunArgs;
@@ -17,6 +18,7 @@ public class MixinMinecraftClient {
     public void init(RunArgs args, CallbackInfo ci) {
         // Registers the Example Event-Listener
         EventManager.register(new EventListener());
+        ActionUtil.run(() -> System.out.println("RUNNING..."), 5, 0, 1000);
     }
 
     @Inject(method = "tick", at = @At(value = "HEAD"))
